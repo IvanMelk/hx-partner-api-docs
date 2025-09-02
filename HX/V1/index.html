@@ -24,8 +24,7 @@
     <meta property="twitter:image" content="../../assets/logo.svg">
     
     <link rel="icon" href="../../assets/logo.svg">
-    <link rel="stylesheet" href="../../assets/docfx.min.css">
-    <link rel="stylesheet" href="../../assets/main.css">
+
     <meta name="docfx:navrel" content="../../toc.html">
     <meta name="docfx:tocrel" content="../toc.html">
     
@@ -40,8 +39,7 @@
     <meta name="loc:copy" content="Copy">
     <meta name="loc:downloadPdf" content="Download PDF">
 
-    <script type="module" src="../../assets/docfx.min.js"></script>
-    <script src="../../assets/toc.js"></script>
+
 
     <script>
       // Always use dark theme
@@ -50,55 +48,24 @@
 
   </head>
 
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
-    <header class="bg-body ">
-      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
-        <div class="container-xxl flex-nowrap">
-          <a class="navbar-brand" href="../../index.html">
-            <img id="logo" class="svg" src="../../assets/logo.svg" alt="Hurtigruten Expeditions Logo">
-            <span>Partner API</span>
-          </a>
+  <body>
+    <!-- Header will be injected by header.js component -->
 
-          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="bi bi-three-dots"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navpanel">
-            <div id="navbar">
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <main>
 
-    <main class="container-xxl">
-      <div class="toc-offcanvas">
-        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <nav class="toc" id="toc"></nav>
-          </div>
-        </div>
-      </div>
 
-      <div class="content">
-        <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
-            <i class="bi bi-list"></i>
-          </button>
-
+      <div>
+        <div>
           <nav id="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
-              <li class="breadcrumb-item"><a href="../index.html">HX API</a></li>
-              <li class="breadcrumb-item active" aria-current="page">V1</li>
+            <ol>
+                              <li><a href="../../index.html">Home</a></li>
+                <li><a href="../index.html">HX API</a></li>
+                <li aria-current="page">V1</li>
             </ol>
           </nav>
         </div>
 
-        <article data-uid="">
+        <article>
 <h1 id="getting-started">Getting Started</h1>
 
 <h2 id="about-this-api">About this API</h2>
@@ -112,7 +79,7 @@
 <h2 id="contact-us-for-credentials">Contact Us for Credentials</h2>
 <p>To start using the API, you need to obtain credentials. Please contact our support team via the <a href="https://hurtigruten.atlassian.net/servicedesk/customer/portal/13/group/159">support portal</a> to get your credentials created.</p>
 <p>You will receive authentication credentials and a user key.</p>
-<div class="NOTE">
+<div>
 <h5>Note</h5>
 <p>If you already have a user_key from the previous partner API offering, you may continue to use this as before. However you will still need to acquire authorization credentials to generate a bearer token.</p>
 </div>
@@ -128,6 +95,7 @@
 <li>Staging: <a href="https://partner.dev.travelhx.dev/api">https://partner.dev.travelhx.dev/api</a></li>
 <li>Production: <a href="https://partner.travelhx.com/api">https://partner.travelhx.com/api</a></li>
 </ul>
+<p><strong>Request</strong></p>
 <pre><code class="lang-BASH">curl --request POST \
   --url https://travelhx-backend-stage.eu.auth0.com/oauth/token \
   --header 'content-type: application/json' \
@@ -155,11 +123,11 @@
 </article>
 
 
-        <div class="next-article d-print-none " id="nextArticle"></div>
+        <div id="nextArticle"></div>
 
       </div>
 
-      <div class="affix">
+      <div>
         <nav id="affix"></nav>
       </div>
     </main>
