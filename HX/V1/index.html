@@ -24,7 +24,7 @@
     <meta property="twitter:image" content="../../assets/logo.svg">
     
     <link rel="icon" href="../../assets/logo.svg">
-
+    <link rel="stylesheet" href="../../assets/styles.css">
     <meta name="docfx:navrel" content="../../toc.html">
     <meta name="docfx:tocrel" content="../toc.html">
     
@@ -48,43 +48,42 @@
 
   </head>
 
-  <body>
+  <body class="bg-dark-bg text-text-primary min-h-screen">
     <!-- Header will be injected by header.js component -->
 
-    <main>
-
-
-      <div>
-        <div>
+    <main class="px-6 py-8">
+      <div class="breadcrumb">
           <nav id="breadcrumb">
             <ol>
-                              <li><a href="../../index.html">Home</a></li>
-                <li><a href="../index.html">HX API</a></li>
-                <li aria-current="page">V1</li>
+                                            <li><a href="../../index.html" class="text-accent hover:text-accent/80">Home</a></li>
+              <li><a href="../index.html" class="text-accent hover:text-accent/80">HX API</a></li>
+              <li class="active" aria-current="page">V1</li>
             </ol>
           </nav>
         </div>
 
-        <article>
-<h1 id="getting-started">Getting Started</h1>
+        <article class="prose prose-lg max-w-none prose-invert">
+          <h1 id="getting-started" class="text-4xl font-bold text-accent mb-8">Getting Started</h1>
 
-<h2 id="about-this-api">About this API</h2>
-<p>The V1 API is the same API as we have always offered, however this API will be scoped only to Hurtigruten Expeditions content.</p>
-<h2 id="environments">Environments</h2>
-<p>In addition to the production API, we expose a Staging environment against which you can write your integration and try out the endpoints.</p>
-<ul>
-<li>Staging: <a href="https://partner.staging.travelhx.com/api/v1">https://partner.staging.travelhx.com/api/v1</a></li>
-<li>Production: <a href="https://partner.travelhx.com/api/v1">https://partner.travelhx.com/api/v1</a></li>
-</ul>
-<h2 id="contact-us-for-credentials">Contact Us for Credentials</h2>
-<p>To start using the API, you need to obtain credentials. Please contact our support team via the <a href="https://hurtigruten.atlassian.net/servicedesk/customer/portal/13/group/159">support portal</a> to get your credentials created.</p>
-<p>You will receive authentication credentials and a user key.</p>
-<div>
-<h5>Note</h5>
-<p>If you already have a user_key from the previous partner API offering, you may continue to use this as before. However you will still need to acquire authorization credentials to generate a bearer token.</p>
-</div>
-<h2 id="authentication-with-auth0">Authentication with Auth0</h2>
-<p>Once you have your credentials, you need to authenticate with Auth0 to get a bearer token.</p>
+          <h2 id="about-this-api" class="text-2xl font-semibold text-text-primary mt-8 mb-4">About this API</h2>
+          <p class="text-text-secondary mb-4">The V1 API is the same API as we have always offered, however this API will be scoped only to Hurtigruten Expeditions content.</p>
+          
+          <h2 id="environments" class="text-2xl font-semibold text-text-primary mt-8 mb-4">Environments</h2>
+          <p class="text-text-secondary mb-4">In addition to the production API, we expose a Staging environment against which you can write your integration and try out the endpoints.</p>
+          <ul class="list-disc pl-6 mb-6 text-text-secondary">
+            <li>Staging: <a href="https://partner.staging.travelhx.com/api/v1" class="text-accent hover:text-accent/80 transition-colors">https://partner.staging.travelhx.com/api/v1</a></li>
+            <li>Production: <a href="https://partner.travelhx.com/api/v1" class="text-accent hover:text-accent/80 transition-colors">https://partner.travelhx.com/api/v1</a></li>
+          </ul>
+          <h2 id="contact-us-for-credentials" class="text-2xl font-semibold text-text-primary mt-8 mb-4">Contact Us for Credentials</h2>
+          <p class="text-text-secondary mb-4">To start using the API, you need to obtain credentials. Please contact our support team via the <a href="https://hurtigruten.atlassian.net/servicedesk/customer/portal/13/group/159" class="text-accent hover:text-accent/80 transition-colors">support portal</a> to get your credentials created.</p>
+          <p class="text-text-secondary mb-6">You will receive authentication credentials and a user key.</p>
+          
+          <div class="note-box">
+            <h5 class="font-semibold text-blue-300 mb-2">Note</h5>
+            <p class="text-blue-200">If you already have a user_key from the previous partner API offering, you may continue to use this as before. However you will still need to acquire authorization credentials to generate a bearer token.</p>
+          </div>
+          <h2 id="authentication-with-auth0" class="text-2xl font-semibold text-text-primary mt-8 mb-4">Authentication with Auth0</h2>
+          <p class="text-text-secondary mb-4">Once you have your credentials, you need to authenticate with Auth0 to get a bearer token.</p>
 <p>Depending on which environment you want to access, you'll need to use one of the following URLs</p>
 <ul>
 <li>Staging: <a href="https://travelhx-backend-stage.eu.auth0.com/oauth/token">https://travelhx-backend-stage.eu.auth0.com/oauth/token</a></li>
@@ -95,13 +94,13 @@
 <li>Staging: <a href="https://partner.dev.travelhx.dev/api">https://partner.dev.travelhx.dev/api</a></li>
 <li>Production: <a href="https://partner.travelhx.com/api">https://partner.travelhx.com/api</a></li>
 </ul>
-<p><strong>Request</strong></p>
+<p><strong class="api-label">Request</strong></p>
 <pre><code class="lang-BASH">curl --request POST \
   --url https://travelhx-backend-stage.eu.auth0.com/oauth/token \
   --header 'content-type: application/json' \
   --data '{&quot;client_id&quot;:&quot;YOUR_CLIENT_ID&quot;,&quot;client_secret&quot;:&quot;YOUR_CLIENT_SECRET&quot;,&quot;audience&quot;:&quot;https://partner.dev.travelhx.dev/api&quot;,&quot;grant_type&quot;:&quot;client_credentials&quot;}'
 </code></pre>
-<p><strong>Response</strong></p>
+<p><strong class="api-label">Response</strong></p>
 <pre><code class="lang-JSON">{
   &quot;access_token&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c&quot;,
   &quot;scope&quot;: &quot;application:B2B.API.Legacy&quot;,

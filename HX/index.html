@@ -10,8 +10,7 @@
     <meta name="author" content="Hurtigruten Expeditions">
     
     <link rel="icon" href="../assets/logo.svg">
-
-    
+    <link rel="stylesheet" href="../assets/styles.css">
     <script src="../assets/header.js"></script>
 
     <script>
@@ -21,70 +20,61 @@
 
   </head>
 
-  <body>
+    <body class="bg-dark-bg text-text-primary min-h-screen">
     <!-- Header will be injected by header.js component -->
 
-    <main>
-              <div>
-                  <div>
+    <main class="px-6 py-8">
+      <div class="breadcrumb">
           <nav id="breadcrumb">
             <ol>
-                              <li><a href="../index.html">Home</a></li>
-                <li aria-current="page">HX API</li>
+                                            <li><a href="../index.html" class="text-accent hover:text-accent/80">Home</a></li>
+              <li class="active" aria-current="page">HX API</li>
             </ol>
           </nav>
         </div>
 
-        <article>
-          <h1 id="hx-api-documentation">HX API Documentation</h1>
+        <article class="prose prose-lg max-w-none prose-invert">
+          <h1 id="hx-api-documentation" class="text-4xl font-bold text-accent mb-8">HX API Documentation</h1>
 
-          <p>Welcome to the Hurtigruten Expeditions (HX) API documentation. This section provides comprehensive information on how to integrate with Hurtigruten Expeditions' expedition services.</p>
+          <p class="text-lg text-text-secondary mb-6">Welcome to the Hurtigruten Expeditions (HX) API documentation. This section provides comprehensive information on how to integrate with Hurtigruten Expeditions' expedition services.</p>
 
-          <h2 id="available-versions">Available Versions</h2>
+          <h2 id="available-versions" class="text-2xl font-semibold text-text-primary mt-8 mb-4">Available Versions</h2>
 
-          <div>
-            <h3 id="hx-v2-api">HX V2 API</h3>
-            <p>The HX V2 API is the next generation of our expedition API, currently in preview. This version includes enhanced features and improved performance.</p>
-            <ul>
-              <li><a href="V2/index.html">HX V2 API Documentation</a></li>
+          <div class="api-section">
+            <h3 id="hx-v2-api" class="text-xl font-semibold text-text-primary mb-3">HX V2 API</h3>
+            <p class="text-text-secondary mb-4">The HX V2 API is the next generation of our expedition API, currently in preview. This version includes enhanced features and improved performance.</p>
+            <ul class="list-disc pl-6 text-text-secondary">
+              <li><a href="V2/index.html" class="text-accent hover:text-accent/80 transition-colors">HX V2 API Documentation</a></li>
             </ul>
           </div>
           
-          <div>
-            <h3 id="hx-v1-api"> HX V1 API</h3>
-            <p>The HX V1 API provides access to Hurtigruten Expeditions' expedition services. This is the stable, production-ready version of the API.</p>
-            <ul>
-              <li><a href="V1/index.html"> HX V1 API Documentation</a></li>
+          <div class="api-section">
+            <h3 id="hx-v1-api" class="text-xl font-semibold text-text-primary mb-3"> HX V1 API</h3>
+            <p class="text-text-secondary mb-4">The HX V1 API provides access to Hurtigruten Expeditions' expedition services. This is the stable, production-ready version of the API.</p>
+            <ul class="list-disc pl-6 text-text-secondary">
+              <li><a href="V1/index.html" class="text-accent hover:text-accent/80 transition-colors"> HX V1 API Documentation</a></li>
             </ul>
           </div>
 
          
 
-          <h2 id="getting-started">Getting Started</h2>
-          <p>To start using the HX APIs, follow these steps:</p>
-          <ol>
-            <li><strong>Contact us for credentials</strong>: Reach out to our support team via the <a href="https://hurtigruten.atlassian.net/servicedesk/customer/portal/13/group/159">support portal</a> to get your API credentials.</li>
-            <li><strong>Authenticate with Auth0</strong>: Use your credentials to obtain a bearer token from Auth0.</li>
-            <li><strong>Make API Requests</strong>: Use the bearer token to authenticate your requests to the HX APIs.</li>
+          <h2 id="getting-started" class="text-2xl font-semibold text-text-primary mt-8 mb-4">Getting Started</h2>
+          <p class="text-text-secondary mb-4">To start using the HX APIs, follow these steps:</p>
+          <ol class="list-decimal pl-6 mb-6 text-text-secondary">
+            <li class="mb-2"><strong>Contact us for credentials</strong>: Reach out to our support team via the <a href="https://hurtigruten.atlassian.net/servicedesk/customer/portal/13/group/159" class="text-accent hover:text-accent/80 transition-colors">support portal</a> to get your API credentials.</li>
+            <li class="mb-2"><strong>Authenticate with Auth0</strong>: Use your credentials to obtain a bearer token from Auth0.</li>
+            <li class="mb-2"><strong>Make API Requests</strong>: Use the bearer token to authenticate your requests to the HX APIs.</li>
           </ol>
 
-          <div>
-            <h5>Note</h5>
-            <p>API credentials are specific to the HX API. Please ensure you have the correct credentials for accessing the expedition services.</p>
+          <div class="note-box">
+            <h5 class="font-semibold text-blue-300 mb-2">Note</h5>
+            <p class="text-blue-200">API credentials are specific to the HX API. Please ensure you have the correct credentials for accessing the expedition services.</p>
           </div>
 
-          <h2 id="support">Support</h2>
-          <p>If you have any questions or need assistance, please contact our support team via the <a href="https://hurtigruten.atlassian.net/servicedesk/customer/portal/13/group/159">support portal</a>.</p>
+          <h2 id="support" class="text-2xl font-semibold text-text-primary mt-8 mb-4">Support</h2>
+          <p class="text-text-secondary">If you have any questions or need assistance, please contact our support team via the <a href="https://hurtigruten.atlassian.net/servicedesk/customer/portal/13/group/159" class="text-accent hover:text-accent/80 transition-colors">support portal</a>.</p>
 
         </article>
-
-        <div id="nextArticle"></div>
-
-      </div>
-
-      <div>
-        <nav id="affix"></nav>
-      </div>
     </main>
 
   </body>
