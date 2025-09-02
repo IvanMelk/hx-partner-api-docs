@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Getting Started </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Getting Started ">
+      
+      
+      <link rel="icon" href="../../assets/logo.svg">
+      <link rel="stylesheet" href="../../assets/docfx.min.css">
+      <link rel="stylesheet" href="../../assets/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/hurtigruten/pg.services.b2b.partner/blob/master/docfx/HX/V2/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="../../assets/docfx.min.js"></script>
+      <script src="../../assets/toc.js"></script>
+
+      <script>
+        // Always use dark theme
+        document.documentElement.setAttribute('data-bs-theme', 'dark')
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body ">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="../index.html">HX API</a></li>
+              <li class="breadcrumb-item active" aria-current="page">V2</li>
+            </ol>
+          </nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="getting-started">Getting Started</h1>
+
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Preview version : The documentation and models are in preview at the moment and subject to change. Please explore and provide feedback.</p>
+</div>
+<p>The Hurtigruten Partner API provides access to Hurtigruten booking, availability, pricing and content describing Hurtigruten’s offerings, ships, cabins, excursions and ports.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Please note that this version of the Hurtigruten Partner API only covers expedition sailings.</p>
+</div>
+<h2 id="getting-started-1">Getting Started</h2>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>This section is under active development. It may change at any time.</p>
+</div>
+<h3 id="environments">Environments</h3>
+<p>We maintain a staging environment which you can use to test, play, and develop against.
+The staging environment behaves identically to the production environment, so when you're ready to make the switch, you need only switch the base URL.</p>
+<p>Staging: <code>https://partner.staging.travelhx.com/api/v2</code></p>
+<p>Production: <code>https://partner.travelhx.com/api/v2</code></p>
+<h3 id="authentication">Authentication</h3>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you have a valid <code>user_key</code> for the V1 API, you can use it here as your <code>agencyId</code>.</p>
+</div>
+<p>As part of your onboarding to the API, you will have been provisioned a <code>clientId</code>, a <code>clientSecret</code> and an <code>agencyId</code>.</p>
+<p>You use these credentials to obtain a bearer token, which lets you access the Partner API.</p>
+<ul>
+<li>Staging: <a href="https://travelhx-backend-stage.eu.auth0.com/oauth/token">https://travelhx-backend-stage.eu.auth0.com/oauth/token</a></li>
+<li>Production: <a href="https://partner-travelhx.eu.auth0.com/oauth/token">https://partner-travelhx.eu.auth0.com/oauth/token</a></li>
+</ul>
+<p>And one of the following values for <code>audience</code>:</p>
+<ul>
+<li>Staging: <a href="https://partner.dev.travelhx.dev/api">https://partner.dev.travelhx.dev/api</a></li>
+<li>Production: <a href="https://partner.travelhx.com/api">https://partner.travelhx.com/api</a></li>
+</ul>
+<pre><code class="lang-Bash">curl --request POST \
+  --url https://b2b-portal-staging.eu.auth0.com/oauth/token \
+  --header 'content-type: application/json' \
+  --data '{&quot;client_id&quot;:&quot;YOUR_CLIENT_ID&quot;,&quot;client_secret&quot;:&quot;YOUR_CLIENT_SECRET&quot;,&quot;agency_id&quot;:&quot;YOUR_AGENCY_ID&quot;,&quot;audience&quot;:&quot;https://staging.partner.hurtigruten.com/api&quot;,&quot;grant_type&quot;:&quot;client_credentials&quot;}'
+</code></pre>
+<p><strong>Response</strong></p>
+<pre><code class="lang-JSON">{
+  &quot;access_token&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c&quot;,
+  &quot;scope&quot;: &quot;application:Partner.WebApi&quot;,
+  &quot;expires_in&quot;: 86400,
+  &quot;token_type&quot;: &quot;Bearer&quot;
+}
+</code></pre>
+<p>The bearer token is valid for a set amount of time as indicated by <code>expires_in</code> (in seconds) and should be cached for re-use. You then attach your bearer token in the header of your requests to the Partner API</p>
+<pre><code class="lang-Bash">curl --location 'https://partner.staging.travelhx.com/api/v2/example-endpoint' \
+--header 'Authorization: Bearer &quot;YOUR_BEARER_TOKEN&quot;'
+</code></pre>
+<h2 id="inventory-api">Inventory API</h2>
+<p>With the Hurtigruten Inventory API you can:</p>
+<ul>
+<li>Get package data files</li>
+<li>Get reference data files</li>
+</ul>
+<h2 id="booking-api">Booking API</h2>
+<p>With the Hurtigruten Booking API you can:</p>
+<ul>
+<li>Search for availability</li>
+<li>Get updated prices</li>
+<li>Create bookings</li>
+<li>Query previously made bookings</li>
+<li>Take payment</li>
+</ul>
+
+</article>
+
+
+        <div class="next-article d-print-none " id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+
+  </body>
+</html>
