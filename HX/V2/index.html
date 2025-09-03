@@ -5,16 +5,15 @@
       <title>Getting Started </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Getting Started ">
-      
-      
+    
+    
       <link rel="icon" href="../../assets/logo.svg">
-      <link rel="stylesheet" href="../../assets/styles.css">
       <meta name="docfx:navrel" content="../../toc.html">
       <meta name="docfx:tocrel" content="../toc.html">
-      
-      
-      
-      
+    
+    
+    
+    
       <meta name="docfx:docurl" content="https://github.com/hurtigruten/pg.services.b2b.partner/blob/master/docfx/HX/V2/index.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
@@ -26,7 +25,6 @@
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
 
-    <script src="../../assets/header.js"></script>
 
       <script>
         // Always use dark theme
@@ -35,39 +33,39 @@
 
   </head>
 
-  <body class="bg-dark-bg text-text-primary min-h-screen">
+  <body>
     <!-- Header will be injected by header.js component -->
 
-    <main class="px-6 py-8">
-      <div class="breadcrumb">
+    <main>
+      <div>
           <nav id="breadcrumb">
             <ol>
-                                            <li><a href="../../index.html" class="text-accent hover:text-accent/80">Home</a></li>
-              <li><a href="../index.html" class="text-accent hover:text-accent/80">HX API</a></li>
-              <li class="active" aria-current="page">V2</li>
+                                            <li><a href="../../index.html">Home</a></li>
+              <li><a href="../index.html">HX API</a></li>
+              <li   aria-current="page">V2</li>
             </ol>
           </nav>
         </div>
 
-        <article class="prose prose-lg max-w-none prose-invert">
-          <h1 id="getting-started" class="text-4xl font-bold text-accent mb-8">Getting Started</h1>
+        <article>
+          <h1 id="getting-started">Getting Started</h1>
 
-          <div class="important-box">
-            <h5 class="font-semibold text-red-300 mb-2">Important</h5>
-            <p class="text-red-200">Preview version : The documentation and models are in preview at the moment and subject to change. Please explore and provide feedback.</p>
+          <div>
+            <h5>Important</h5>
+            <p>Preview version : The documentation and models are in preview at the moment and subject to change. Please explore and provide feedback.</p>
           </div>
-          <p class="text-lg text-text-secondary mb-6">The Hurtigruten Partner API provides access to Hurtigruten booking, availability, pricing and content describing Hurtigruten's offerings, ships, cabins, excursions and ports.</p>
-          
-          <div class="note-box">
-            <h5 class="font-semibold text-blue-300 mb-2">Note</h5>
-            <p class="text-blue-200">Please note that this version of the Hurtigruten Partner API only covers expedition sailings.</p>
+          <p>The Hurtigruten Partner API provides access to Hurtigruten booking, availability, pricing and content describing Hurtigruten's offerings, ships, cabins, excursions and ports.</p>
+        
+          <div>
+            <h5>Note</h5>
+            <p>Please note that this version of the Hurtigruten Partner API only covers expedition sailings.</p>
           </div>
-          
-          <h2 id="getting-started-1" class="text-2xl font-semibold text-text-primary mt-8 mb-4">Getting Started</h2>
-          
-          <div class="warning-box">
-            <h5 class="font-semibold text-yellow-300 mb-2">Warning</h5>
-            <p class="text-yellow-200">This section is under active development. It may change at any time.</p>
+        
+          <h2 id="getting-started-1">Getting Started</h2>
+        
+          <div>
+            <h5>Warning</h5>
+            <p>This section is under active development. It may change at any time.</p>
           </div>
 <h3 id="environments">Environments</h3>
 <p>We maintain a staging environment which you can use to test, play, and develop against.
@@ -75,7 +73,7 @@ The staging environment behaves identically to the production environment, so wh
 <p>Staging: <code>https://partner.staging.travelhx.com/api/v2</code></p>
 <p>Production: <code>https://partner.travelhx.com/api/v2</code></p>
 <h3 id="authentication">Authentication</h3>
-<div class="NOTE">
+<div>
 <h5>Note</h5>
 <p>If you have a valid <code>user_key</code> for the V1 API, you can use it here as your <code>agencyId</code>.</p>
 </div>
@@ -90,21 +88,21 @@ The staging environment behaves identically to the production environment, so wh
 <li>Staging: <a href="https://partner.dev.travelhx.dev/api">https://partner.dev.travelhx.dev/api</a></li>
 <li>Production: <a href="https://partner.travelhx.com/api">https://partner.travelhx.com/api</a></li>
 </ul>
-<p><strong class="api-label">Request</strong></p>
-<pre><code class="lang-Bash">curl --request POST \
+<p><strong>Request</strong></p>
+<pre><code>curl --request POST \
   --url https://b2b-portal-staging.eu.auth0.com/oauth/token \
   --header 'content-type: application/json' \
   --data '{&quot;client_id&quot;:&quot;YOUR_CLIENT_ID&quot;,&quot;client_secret&quot;:&quot;YOUR_CLIENT_SECRET&quot;,&quot;agency_id&quot;:&quot;YOUR_AGENCY_ID&quot;,&quot;audience&quot;:&quot;https://staging.partner.hurtigruten.com/api&quot;,&quot;grant_type&quot;:&quot;client_credentials&quot;}'
 </code></pre>
-<p><strong class="api-label">Response</strong></p>
-<pre><code class="lang-JSON">{
+<p><strong>Response</strong></p>
+<pre><code>{
   &quot;access_token&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c&quot;,
   &quot;scope&quot;: &quot;application:Partner.WebApi&quot;,
   &quot;token_type&quot;: &quot;Bearer&quot;
 }
 </code></pre>
 <p>The bearer token is valid for a set amount of time as indicated by <code>expires_in</code> (in seconds) and should be cached for re-use. You then attach your bearer token in the header of your requests to the Partner API</p>
-<pre><code class="lang-Bash">curl --location 'https://partner.staging.travelhx.com/api/v2/example-endpoint' \
+<pre><code>curl --location 'https://partner.staging.travelhx.com/api/v2/example-endpoint' \
 --header 'Authorization: Bearer &quot;YOUR_BEARER_TOKEN&quot;'
 </code></pre>
   </article>
