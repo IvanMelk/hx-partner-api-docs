@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Extras</title>
+
+    <link rel="stylesheet" href="../../../../assets/sidebar.css">
+    <link rel="stylesheet" href="../../../../assets/page-styles.css">
+    </head>
+<body>
+
+    <div class="main-content">
+        <div class="content-wrapper">
+            <div id="content">
+                <main class="content">
+        
+<h1 id="remove-extras">Remove Extras</h1>
+
+<p><strong>METHOD</strong>: POST</p>
+<p><strong>Endpoint</strong>: <code>/quote/{:quoteId}/{:voyageId}/extras/remove</code></p>
+<h2 id="example">Example</h2>
+<h3 id="request">Request</h3>
+<p><strong>Type</strong>: <a href="../../_generated/Partner.Public.BookingApi.Supplementals.ManageExtrasRequest.html">ManageExtrasRequest</a></p>
+<pre><code class="lang-bash hljs language-bash" data-highlighted="yes">curl --location <span class="hljs-string">'{:apiBase}/quote/4539fc0e-ee2c-4468-b493-70052a7e9e8d/9c5d0236-fabc-4053-a565-b59e983936c1/extras/remove'</span> \
+--header <span class="hljs-string">'Content-Type: application/json'</span> \
+--data <span class="hljs-string">'{
+  "addons": [
+    {
+      "id": "70fa834d-1a10-4bf9-b338-af2cf53eb4c9",
+      "quantityPerPassenger": 1,
+      "passengerIds": [
+        "9f8ebd05-69da-4369-a8fe-9c12a8a813ff",
+        "20981ae9-6fb8-426a-920e-a224e8fb0fd7"
+      ]
+    }
+  ],
+  "excursions": [
+    {
+      "id": "c560bd70-58c8-48c2-813d-d30370341ffc",
+      "passengerIds": [
+        "9f8ebd05-69da-4369-a8fe-9c12a8a813ff",
+        "20981ae9-6fb8-426a-920e-a224e8fb0fd7"
+      ]
+    }
+  ],
+  "meals": [
+    {
+      "id": "2ff77489-4019-406a-a958-ea4fdd102efc",
+      "passengerIds": [
+        "9f8ebd05-69da-4369-a8fe-9c12a8a813ff",
+        "20981ae9-6fb8-426a-920e-a224e8fb0fd7"
+      ]
+    }
+  ]
+}'</span>
+</code><!----><a class="btn border-0 code-action" href="#" title="Copy"></a></pre>
+<h3 id="response">Response</h3>
+<p><strong>Type</strong>: <a href="../../_generated/Partner.Public.BookingApi.Quote.QuoteResponse.html">QuoteResponse</a></p>
+<pre><code class="lang-JSON hljs language-JSON" data-highlighted="yes"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"quoteId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"4539fc0e-ee2c-4468-b493-70052a7e9e8d"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"package"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"cd7011ec-b46b-4874-b08b-e10d402cd665"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"code"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"DEG24BKBTR"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"description"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Bergen - Kirkenes - Bergen inkl. Transfers"</span>
+  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"voyage"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"9c5d0236-fabc-4053-a565-b59e983936c1"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"includedAddons"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+      <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">"code"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"FREEWIFI"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"description"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"WIFI"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"quantityPerPassenger"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"date"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"2024-04-03"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"passengerIds"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+          <span class="hljs-string">"9f8ebd05-69da-4369-a8fe-9c12a8a813ff"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-string">"20981ae9-6fb8-426a-920e-a224e8fb0fd7"</span>
+        <span class="hljs-punctuation">]</span>
+      <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">"code"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"TEACOFFEE"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"description"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"BEVERAGE"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"quantityPerPassenger"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"date"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"2024-04-03"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"passengerIds"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+          <span class="hljs-string">"9f8ebd05-69da-4369-a8fe-9c12a8a813ff"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-string">"20981ae9-6fb8-426a-920e-a224e8fb0fd7"</span>
+        <span class="hljs-punctuation">]</span>
+      <span class="hljs-punctuation">}</span>
+    <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"includedMeals"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+      <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">"code"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"FB"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"details"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+          <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"description"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"BREAKFAST"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"dates"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+              <span class="hljs-string">"2024-04-04"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-05"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-06"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-07"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-08"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-09"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-10"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-11"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-12"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-13"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-14"</span>
+            <span class="hljs-punctuation">]</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"description"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"DINNER"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"dates"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+              <span class="hljs-string">"2024-04-03"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-04"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-05"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-06"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-07"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-08"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-09"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-10"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-11"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-12"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-13"</span>
+            <span class="hljs-punctuation">]</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"description"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"LUNCH"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"dates"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+              <span class="hljs-string">"2024-04-04"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-05"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-06"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-07"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-08"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-09"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-10"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-11"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-12"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-13"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-string">"2024-04-14"</span>
+            <span class="hljs-punctuation">]</span>
+          <span class="hljs-punctuation">}</span>
+        <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"passengerIds"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+          <span class="hljs-string">"9f8ebd05-69da-4369-a8fe-9c12a8a813ff"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-string">"20981ae9-6fb8-426a-920e-a224e8fb0fd7"</span>
+        <span class="hljs-punctuation">]</span>
+      <span class="hljs-punctuation">}</span>
+    <span class="hljs-punctuation">]</span>
+  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"passengers"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"9f8ebd05-69da-4369-a8fe-9c12a8a813ff"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"ageCategory"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"ADULT"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"guestType"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"REGULAR"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">3517.00</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"firstName"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"One"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"lastName"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Test"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"gender"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Male"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"dateOfBirth"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"2000-01-01T00:00:00"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"nationality"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"DE"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"email"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"one@mail.com"</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"20981ae9-6fb8-426a-920e-a224e8fb0fd7"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"ageCategory"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"ADULT"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"guestType"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"REGULAR"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">3517.00</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"firstName"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Two"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"lastName"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Test"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"gender"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Male"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"dateOfBirth"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"2000-02-02T00:00:00"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"nationality"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"DE"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"email"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"two@mail.com"</span>
+    <span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"paymentInformation"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"currency"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"EUR"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"fullAmount"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">7034.00</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"dueByUtc"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"2024-03-03T23:00:00Z"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"depositAmount"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1406.80</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"depositDueByUtc"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"2024-02-26T22:34:51.4893755Z"</span>
+  <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span>
+</code><!----><a class="btn border-0 code-action" href="#" title="Copy"></a></pre>
+
+    </main>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Hurtigruten Partner APIs</p>
+    </footer>
+
+    <script src="../../../../assets/spa-sidebar.js"></script>
+    </body>
+</html>

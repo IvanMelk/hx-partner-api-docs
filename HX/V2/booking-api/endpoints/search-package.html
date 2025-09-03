@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Package</title>
+
+    <link rel="stylesheet" href="../../../../assets/sidebar.css">
+    <link rel="stylesheet" href="../../../../assets/page-styles.css">
+    </head>
+<body>
+
+    <div class="main-content">
+        <div class="content-wrapper">
+            <div id="content">
+                <main class="content">
+        
+<h1 id="search-package">Search Package</h1>
+
+<p><strong>METHOD</strong>: GET</p>
+<p><strong>Endpoint</strong>: <code>/booking/{:packageId}</code></p>
+<p><strong>Query parameters</strong>:</p>
+<div class="table-responsive"><table class="table table-bordered table-condensed">
+<thead>
+<tr>
+<th>Name</th>
+<th>Required</th>
+<th>JSON Type</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Adults</td>
+<td>No</td>
+<td>Number</td>
+<td>The sum of adults plus children must be 1 or more</td>
+</tr>
+<tr>
+<td>AgentId</td>
+<td>No</td>
+<td>String</td>
+<td>The agent responsible for the quote/booking</td>
+</tr>
+<tr>
+<td>Children</td>
+<td>No</td>
+<td>Number</td>
+<td>The sum of adults plus children must be 1 or more</td>
+</tr>
+<tr>
+<td>Currency</td>
+<td>Yes</td>
+<td>String</td>
+<td>Uses ISO 4217 currency codes</td>
+</tr>
+<tr>
+<td>StartDate</td>
+<td>Yes</td>
+<td>String</td>
+<td>Uses ISO 8601 date formatting</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="example">Example</h2>
+<h3 id="request">Request</h3>
+<pre><code class="lang-bash hljs language-bash" data-highlighted="yes">curl --location --globoff <span class="hljs-string">'{:apiBase}/booking/SCGAL2425EEU?agentId=12345&amp;currency=nok&amp;adults=1&amp;startDate=2024-03-27'</span> \
+--header <span class="hljs-string">'Authorization: Bearer {:bearer_token}'</span>
+</code><!----><a class="btn border-0 code-action" href="#" title="Copy"></a></pre>
+<h3 id="response">Response</h3>
+<p><strong>Type</strong>: <a href="../../_generated/Partner.Public.BookingApi.Search.PackageSearchResult.html">PackageSearchResult</a></p>
+<pre><code class="lang-JSON hljs language-JSON" data-highlighted="yes"><span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"packageId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"SCGAL2425EEU"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"quoteId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"45647d72-4af1-4b0a-8666-4ac476a5d8af"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"departure"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"78d863ac-d761-48ef-9af5-c0e6dd9c289c"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"startDate"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"2024-03-27T14:30:00"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"endDate"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"2024-04-02T09:00:00"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"shipCode"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"SC"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"cabins"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+            <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"category"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"EE"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"superCategory"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Explorer"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">81932</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"availableCabins"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">12</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"minimumOccupancy"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"maximumOccupancy"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">2</span>
+            <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"category"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"EH"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"superCategory"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Explorer"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">77730</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"availableCabins"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">18</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"minimumOccupancy"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"maximumOccupancy"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">2</span>
+            <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"category"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"EP"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"superCategory"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Explorer"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">86134</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"availableCabins"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">2</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"minimumOccupancy"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"maximumOccupancy"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">2</span>
+            <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"category"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"FH"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"superCategory"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Explorer"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">86134</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"availableCabins"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">2</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"minimumOccupancy"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"maximumOccupancy"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">3</span>
+            <span class="hljs-punctuation">}</span>
+        <span class="hljs-punctuation">]</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"passengers"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+        <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"a7fee923-1daf-43be-a5f4-37c78a1dce59"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"ageCategory"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"ADULT"</span>
+        <span class="hljs-punctuation">}</span>
+    <span class="hljs-punctuation">]</span>
+<span class="hljs-punctuation">}</span>
+</code><!----><a class="btn border-0 code-action" href="#" title="Copy"></a></pre>
+
+    </main>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Hurtigruten Partner APIs</p>
+    </footer>
+
+    <script src="../../../../assets/spa-sidebar.js"></script>
+    </body>
+</html>

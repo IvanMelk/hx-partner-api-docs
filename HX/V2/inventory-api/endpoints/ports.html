@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Ports</title>
+
+    <link rel="stylesheet" href="../../../../assets/sidebar.css">
+    <link rel="stylesheet" href="../../../../assets/page-styles.css">
+    </head>
+<body>
+
+    <div class="main-content">
+        <div class="content-wrapper">
+            <div id="content">
+                <main class="content">
+        
+<h1 id="get-ports">Get Ports</h1>
+
+<p><strong>METHOD</strong>: GET</p>
+<p><strong>Endpoint</strong>: <code>/refdata/ports</code></p>
+<p><strong>Query Parameters</strong></p>
+<div class="table-responsive"><table class="table table-bordered table-condensed">
+<thead>
+<tr>
+<th>Name</th>
+<th>Required</th>
+<th>JSON Type</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Skip</td>
+<td>No</td>
+<td>Number</td>
+<td>The amount of items to offset the search results by.</td>
+</tr>
+<tr>
+<td>Take</td>
+<td>No</td>
+<td>Number</td>
+<td>The amount of items to include in the returned results.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="example">Example</h2>
+<h3 id="request">Request</h3>
+<pre><code class="lang-bash hljs language-bash" data-highlighted="yes">curl --location <span class="hljs-string">'{:apiBase}/refdata/ports'</span>
+</code><!----><a class="btn border-0 code-action" href="#" title="Copy"></a></pre>
+<h3 id="response">Response</h3>
+<pre><code class="lang-json hljs language-json" data-highlighted="yes"><span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"total"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">860</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"returned"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">20</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"data"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+        <span class="hljs-comment">// ommitted, see note</span>
+    <span class="hljs-punctuation">]</span>
+<span class="hljs-punctuation">}</span>
+</code><!----><a class="btn border-0 code-action" href="#" title="Copy"></a></pre>
+<p><em>note: For details about the port payload, see <a href="../../_generated/Partner.Public.Package.PortDetails.html">PortDetails</a>.</em></p>
+
+    </main>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Hurtigruten Partner APIs</p>
+    </footer>
+
+    <script src="../../../../assets/spa-sidebar.js"></script>
+    </body>
+</html>

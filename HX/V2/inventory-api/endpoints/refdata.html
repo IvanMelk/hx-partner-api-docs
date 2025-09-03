@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Refdata Files</title>
+
+    <link rel="stylesheet" href="../../../../assets/sidebar.css">
+    <link rel="stylesheet" href="../../../../assets/page-styles.css">
+    </head>
+<body>
+
+    <div class="main-content">
+        <div class="content-wrapper">
+            <div id="content">
+                <main class="content">
+        
+<h1 id="get-refdata-files">Get Refdata Files</h1>
+
+<p><strong>METHOD</strong>: GET</p>
+<p><strong>Endpoint</strong>: <code>/refdata</code></p>
+<p><strong>Query Parameters</strong></p>
+<div class="table-responsive"><table class="table table-bordered table-condensed">
+<thead>
+<tr>
+<th>Name</th>
+<th>Required</th>
+<th>JSON Type</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Locale</td>
+<td>No</td>
+<td>String</td>
+<td>The locale to serve the content in.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="example">Example</h2>
+<h3 id="request">Request</h3>
+<pre><code class="lang-bash hljs language-bash" data-highlighted="yes">curl --location <span class="hljs-string">'{:apiBase}/refdata?local=en-US'</span>
+</code><!----><a class="btn border-0 code-action" href="#" title="Copy"></a></pre>
+<h3 id="response">Response</h3>
+<p><strong>Type</strong>: File Download</p>
+<p>Contents:</p>
+<ul>
+<li>excursions_{locale}.json</li>
+<li>portlist.json</li>
+<li>ships_{locale}.json</li>
+<li>voyages_{locale}.json</li>
+</ul>
+
+    </main>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Hurtigruten Partner APIs</p>
+    </footer>
+
+    <script src="../../../../assets/spa-sidebar.js"></script>
+    </body>
+</html>

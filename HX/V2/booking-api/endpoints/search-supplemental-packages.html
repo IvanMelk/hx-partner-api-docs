@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Supplemental Packages</title>
+
+    <link rel="stylesheet" href="../../../../assets/sidebar.css">
+    <link rel="stylesheet" href="../../../../assets/page-styles.css">
+    </head>
+<body>
+
+    <div class="main-content">
+        <div class="content-wrapper">
+            <div id="content">
+                <main class="content">
+        
+<h1 id="search-supplemental-packages">Search Supplemental Packages</h1>
+
+<p><strong>METHOD</strong>: GET</p>
+<p><strong>Endpoint</strong>: <code>/quote/{:quoteId}/supplemental/{:packageType}</code></p>
+<h2 id="example">Example</h2>
+<h3 id="request">Request</h3>
+<pre><code class="lang-bash hljs language-bash" data-highlighted="yes">curl --location <span class="hljs-string">'{:apiBase}/quote/8a7fb255-eb81-4bde-b3ab-1c8ed54807f5/supplemental/arrival'</span>
+</code><!----><a class="btn border-0 code-action" href="#" title="Copy"></a></pre>
+<h3 id="response">Response</h3>
+<p><strong>Type</strong>: <a href="../../_generated/Partner.Public.BookingApi.Search.SupplementalPackageResult.html">SupplementalPackageResult</a></p>
+<pre><code class="lang-JSON hljs language-JSON" data-highlighted="yes"><span class="hljs-punctuation">[</span>
+  <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"code"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"DEXBGOA0124"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"description"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Bergen Anreisepaket mit Flug und Transfer"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"from"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"FRA"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"to"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"BGO"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"startDate"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"2024-04-03"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"endDate"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"2024-04-03"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"itinerary"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+      <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">"$type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Stage"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"stage"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Rail"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"description"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Rail&amp;Fly - Zug zum Flug 2. Klasse"</span>
+      <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">"$type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"FlightStage"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">125138</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"from"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"FRA"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"to"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"BGO"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"selectableRoutes"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+          <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">8839</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"from"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"HAM"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"to"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"BGO"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"passengerPrices"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"80b8467f-1c58-4cdd-a220-6590e06e5b96"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">0.0</span>
+              <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"ebc8a68d-a495-48d9-9d95-75aea5535097"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">0.0</span>
+              <span class="hljs-punctuation">}</span>
+            <span class="hljs-punctuation">]</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">8840</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"from"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"CGN"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"to"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"BGO"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"passengerPrices"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"80b8467f-1c58-4cdd-a220-6590e06e5b96"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">50.0</span>
+              <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"ebc8a68d-a495-48d9-9d95-75aea5535097"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">50.0</span>
+              <span class="hljs-punctuation">}</span>
+            <span class="hljs-punctuation">]</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">8841</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"from"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"MUC"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"to"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"BGO"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"passengerPrices"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"80b8467f-1c58-4cdd-a220-6590e06e5b96"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">0.0</span>
+              <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"ebc8a68d-a495-48d9-9d95-75aea5535097"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">0.0</span>
+              <span class="hljs-punctuation">}</span>
+            <span class="hljs-punctuation">]</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">8842</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"from"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"BER"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"to"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"BGO"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"passengerPrices"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"80b8467f-1c58-4cdd-a220-6590e06e5b96"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">0.0</span>
+              <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"ebc8a68d-a495-48d9-9d95-75aea5535097"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">0.0</span>
+              <span class="hljs-punctuation">}</span>
+            <span class="hljs-punctuation">]</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">8843</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"from"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"HAJ"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"to"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"BGO"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"passengerPrices"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"80b8467f-1c58-4cdd-a220-6590e06e5b96"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">50.0</span>
+              <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"ebc8a68d-a495-48d9-9d95-75aea5535097"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">50.0</span>
+              <span class="hljs-punctuation">}</span>
+            <span class="hljs-punctuation">]</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">8844</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"from"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"DUS"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"to"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"BGO"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"passengerPrices"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"80b8467f-1c58-4cdd-a220-6590e06e5b96"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">0.0</span>
+              <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"ebc8a68d-a495-48d9-9d95-75aea5535097"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">0.0</span>
+              <span class="hljs-punctuation">}</span>
+            <span class="hljs-punctuation">]</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">8845</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"from"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"STR"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"to"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"BGO"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"passengerPrices"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"80b8467f-1c58-4cdd-a220-6590e06e5b96"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">50.0</span>
+              <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"ebc8a68d-a495-48d9-9d95-75aea5535097"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">50.0</span>
+              <span class="hljs-punctuation">}</span>
+            <span class="hljs-punctuation">]</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">8846</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"from"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"NUE"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"to"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"BGO"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"passengerPrices"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"80b8467f-1c58-4cdd-a220-6590e06e5b96"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">50.0</span>
+              <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"ebc8a68d-a495-48d9-9d95-75aea5535097"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">50.0</span>
+              <span class="hljs-punctuation">}</span>
+            <span class="hljs-punctuation">]</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">8847</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"from"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"BRE"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"to"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"BGO"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"passengerPrices"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"80b8467f-1c58-4cdd-a220-6590e06e5b96"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">50.0</span>
+              <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"ebc8a68d-a495-48d9-9d95-75aea5535097"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">50.0</span>
+              <span class="hljs-punctuation">}</span>
+            <span class="hljs-punctuation">]</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">8848</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"from"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"VIE"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"to"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"BGO"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"passengerPrices"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"80b8467f-1c58-4cdd-a220-6590e06e5b96"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">50.0</span>
+              <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"ebc8a68d-a495-48d9-9d95-75aea5535097"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">50.0</span>
+              <span class="hljs-punctuation">}</span>
+            <span class="hljs-punctuation">]</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">8849</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"from"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"GRZ"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"to"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"BGO"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"passengerPrices"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"80b8467f-1c58-4cdd-a220-6590e06e5b96"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">50.0</span>
+              <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"ebc8a68d-a495-48d9-9d95-75aea5535097"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">50.0</span>
+              <span class="hljs-punctuation">}</span>
+            <span class="hljs-punctuation">]</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">8850</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"from"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"LNZ"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"to"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"BGO"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"passengerPrices"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"80b8467f-1c58-4cdd-a220-6590e06e5b96"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">50.0</span>
+              <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"ebc8a68d-a495-48d9-9d95-75aea5535097"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">50.0</span>
+              <span class="hljs-punctuation">}</span>
+            <span class="hljs-punctuation">]</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">8851</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"from"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"SZG"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"to"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"BGO"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"passengerPrices"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"80b8467f-1c58-4cdd-a220-6590e06e5b96"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">50.0</span>
+              <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"ebc8a68d-a495-48d9-9d95-75aea5535097"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">50.0</span>
+              <span class="hljs-punctuation">}</span>
+            <span class="hljs-punctuation">]</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">8852</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"from"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"INN"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"to"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"BGO"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"passengerPrices"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"80b8467f-1c58-4cdd-a220-6590e06e5b96"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">50.0</span>
+              <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"ebc8a68d-a495-48d9-9d95-75aea5535097"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">50.0</span>
+              <span class="hljs-punctuation">}</span>
+            <span class="hljs-punctuation">]</span>
+          <span class="hljs-punctuation">}</span>
+        <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"stage"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Flight"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"description"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Scheduled flight FRA - BGO"</span>
+      <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">"$type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Stage"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"stage"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Transfer"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"description"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Transfer Airport - Ship"</span>
+      <span class="hljs-punctuation">}</span>
+    <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"passengerPrices"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+      <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"80b8467f-1c58-4cdd-a220-6590e06e5b96"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">389.00</span>
+      <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"ebc8a68d-a495-48d9-9d95-75aea5535097"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">389.00</span>
+      <span class="hljs-punctuation">}</span>
+    <span class="hljs-punctuation">]</span>
+  <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">]</span>
+</code><!----><a class="btn border-0 code-action" href="#" title="Copy"></a></pre>
+
+    </main>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Hurtigruten Partner APIs</p>
+    </footer>
+
+    <script src="../../../../assets/spa-sidebar.js"></script>
+    </body>
+</html>

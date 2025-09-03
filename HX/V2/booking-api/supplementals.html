@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+
+    <link rel="stylesheet" href="../../../assets/sidebar.css">
+    <link rel="stylesheet" href="../../../assets/page-styles.css">
+    </head>
+<body>
+
+    <div class="main-content">
+        <div class="content-wrapper">
+            <div id="content">
+                <main class="content">
+
+<h2 id="supplemental-packages">Supplemental packages</h2>
+<p>Supplemental packages offer passengers a convenient way to get to and from their travel destinations.
+An arrival package helps with getting to the start location and a departure package helps with getting back home from the end location.</p>
+<h3 id="searching-for-supplemental-packages">Searching for supplemental packages</h3>
+<p>You can search for available supplemental packages through <a href="endpoints/search-supplemental-packages.html">the Search Supplemental Packages endpoint</a>, where <code>packageType</code> is either <code>arrival</code> or <code>departure</code>.</p>
+<h3 id="adding-a-supplemental-package-to-a-quote">Adding a supplemental package to a quote</h3>
+<p>To add a supplemental package to a quote, you need to supply the passenger ids for the passengers that will use the supplemental package through <a href="endpoints/add-supplemental-package.html">the Add Supplemental Package endpoint</a>.</p>
+<p>Some supplemental packages can be customized through selectable routes. For an additional cost, it is possible to change the start location of an arrival package or the end location of a departure package.
+When this is supported by a supplemental package, you will get the selectable route details and prices as part of the search results.
+If there are no supplemental package details, then selectable routes are not supported by the package.</p>
+<h3 id="removing-a-supplemental-package-from-a-quote">Removing a supplemental package from a quote</h3>
+<p>To remove a supplemental package from a quote, use <a href="endpoints/delete-supplemental-package.html">the Delete Supplemental Package endpoint</a>.</p>
+<h3 id="removing-a-passenger-from-a-supplemental-package">Removing a passenger from a supplemental package</h3>
+<p>To remove a passenger from a supplemental package, use <a href="endpoints/delete-supplemental-package-passenger.html">the Delete Supplemental Package Passenger endpoint</a>.</p>
+
+    </main>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Hurtigruten Partner APIs</p>
+    </footer>
+
+    <script src="../../../assets/spa-sidebar.js"></script>
+    </body>
+</html>

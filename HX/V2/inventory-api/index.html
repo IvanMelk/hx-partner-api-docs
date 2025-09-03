@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory models</title>
+
+    <link rel="stylesheet" href="../../../assets/sidebar.css">
+    <link rel="stylesheet" href="../../../assets/page-styles.css">
+    </head>
+<body>
+
+    <div class="main-content">
+        <div class="content-wrapper">
+            <div id="content">
+                <main class="content">
+        
+<h1 id="inventory-models">Inventory models</h1>
+
+<p>There are four main datamodels in the files returned from the API. Please see the model description for each of the models below for details.
+These models are generated from the booking and content systems so the contents of these are dynamic. Properties described in the documentation will only be shown if there is a value for it.</p>
+<h3 id="file-descriptions">File descriptions</h3>
+<p>Each file contains a <code>FileMetadata</code> object which shows the server creation time of the file contents. Please use this information to check whether you are using the latest available data.</p>
+<p>Example :</p>
+<pre><code class="lang-json hljs language-json" data-highlighted="yes"><span class="hljs-attr">"fileMetadata"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">"creationTimeUtc"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"2023-08-25T09:55:48.2582222Z"</span>
+    <span class="hljs-punctuation">}</span>
+</code><!----><a class="btn border-0 code-action" href="#" title="Copy"></a></pre>
+<p>Some files are provided in a localized format, indicated by a filename like <code>filename_[locale]</code> or <code>filename_[market]_[currency]</code>. The market files you see depend on which market you, as a Hurtigruten partner, are eligible to obtain.</p>
+<h3 id="package">Package</h3>
+<p>Filename format : <code>packages_[market]_[currency].json</code></p>
+<p>This file contains an updated list of packages, available cabins and prices.
+This data is refreshed on a 24 hour schedule. For exact pricing, you will need to issue a quote request to the booking API.</p>
+<p><a href="inventorysamples/package.html">Package sample</a></p>
+<p><a href="../_generated/Partner.Public.Package.Package.html">Package model</a></p>
+<h3 id="excursion">Excursion</h3>
+<p>Filename format : <code>excursion_[locale].json</code></p>
+<p>This file contains information about excursions offered by Hurtigruten. Details about specific excursions can only be obtained after placing a quote for a package.</p>
+<p><a href="inventorysamples/excursion.html">Excursion sample</a></p>
+<p><a href="../_generated/Partner.Public.Refdata.Excursion.html">Excursion model</a></p>
+<h3 id="ships">Ships</h3>
+<p>Filename format : <code>ships_[locale].json</code></p>
+<p>This file contains information about each ship, including cabin descriptions.</p>
+<p><a href="inventorysamples/ships.html">Ships sample</a></p>
+<p><a href="../_generated/Partner.Public.Refdata.Ship.html">Ships model</a></p>
+<h3 id="voyage">Voyage</h3>
+<p>Filename format: <code>voyages_[locale].json</code></p>
+<p>This file contains information about the packages listed in the <a href="#package">Packages</a> file. The content includes, for example:</p>
+<ul>
+<li>Links to images</li>
+<li>Selling points</li>
+<li>Passenger information</li>
+<li>Itinerary information</li>
+</ul>
+<div class="NOTE alert alert-info">
+<h5>Note</h5>
+<p>Make sure to use the voyage file that corresponds to the package file you are using as you will otherwise get incomplete or incorrect content information about the packages.
+For example:</p>
+<ul>
+<li><code>packages_uk_aud</code> --&gt; <code>voyages_EN-APAC</code></li>
+<li><code>packages_us_usd</code> --&gt; <code>voyages_EN-AMERICAS</code></li>
+<li><code>packages_no_dkk</code> --&gt; <code>voyages_da-DK</code></li>
+</ul>
+</div>
+<p><a href="inventorysamples/voyage.html">Voyage sample</a></p>
+<p><a href="../_generated/Partner.Public.Refdata.Voyage.html">Voyage model</a></p>
+<h3 id="portlist">Portlist</h3>
+<p>Filename format : <code>portlist.json</code></p>
+<p>This file contains a list of port codes used in the <a href="#package">Packages</a> and <a href="#voyage">Voyages</a> files. The port codes do not follow a specific standard so please use this file to link port code to country and location.</p>
+<p><a href="inventorysamples/portlist.html">Portlist sample</a></p>
+<p><a href="../_generated/Partner.Public.Package.PortDetails.html">Portlist model</a></p>
+
+    </main>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Hurtigruten Partner APIs</p>
+    </footer>
+
+    <script src="../../../assets/spa-sidebar.js"></script>
+    </body>
+</html>

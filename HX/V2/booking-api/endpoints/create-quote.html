@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Quote</title>
+
+    <link rel="stylesheet" href="../../../../assets/sidebar.css">
+    <link rel="stylesheet" href="../../../../assets/page-styles.css">
+    </head>
+<body>
+
+    <div class="main-content">
+        <div class="content-wrapper">
+            <div id="content">
+                <main class="content">
+        
+<h1 id="create-quote">Create Quote</h1>
+
+<p><strong>METHOD</strong>: POST</p>
+<p><strong>Endpoint</strong>: <code>/quote/{:quoteId}</code></p>
+<h2 id="example">Example</h2>
+<h3 id="request">Request</h3>
+<p><strong>Type</strong>: <a href="../../_generated/Partner.Public.BookingApi.Quote.CreateQuoteRequest.html">CreateQuoteRequest</a></p>
+<pre><code class="lang-bash hljs language-bash" data-highlighted="yes">curl --location --globoff <span class="hljs-string">'{:apiBase}/quote/45647d72-4af1-4b0a-8666-4ac476a5d8af'</span> \
+--data <span class="hljs-string">'{
+    "departureId": "78d863ac-d761-48ef-9af5-c0e6dd9c289c",
+    "cabins": [
+        {
+            "cabinGrade": "EE",
+            "passengers": [
+                {
+                    "id": "a7fee923-1daf-43be-a5f4-37c78a1dce59",
+                    "firstName": "John",
+                    "lastName": "Testington",
+                    "dateOfBirth": "1970-11-17T06:08:56.331Z",
+                    "gender": "male",
+                    "nationality": "no",
+                    "phoneNumber": "+4747474747"
+                }
+            ]
+        }
+    ]
+}'</span>
+</code><!----><a class="btn border-0 code-action" href="#" title="Copy"></a></pre>
+<h3 id="response">Response</h3>
+<p><strong>Type</strong>: <a href="../../_generated/Partner.Public.BookingApi.Quote.QuoteResponse.html">QuoteResponse</a></p>
+<pre><code class="lang-JSON hljs language-JSON" data-highlighted="yes"><span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"quoteId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"45647d72-4af1-4b0a-8666-4ac476a5d8af"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"package"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"78d863ac-d761-48ef-9af5-c0e6dd9c289c"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"code"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"SCGAL2425EEU"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"description"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Galápagos Islands Expedition – in Darwin’s Footsteps"</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"passengers"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+        <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"a7fee923-1daf-43be-a5f4-37c78a1dce59"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"ageCategory"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"ADULT"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"guestType"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"REGULAR"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">81932</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"firstName"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"John"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"lastName"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Testington"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"gender"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Male"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"dateOfBirth"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"1970-11-17T06:08:56.331"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"nationality"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"NO"</span>
+        <span class="hljs-punctuation">}</span>
+    <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"paymentInformation"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">"currency"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"NOK"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"fullAmount"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">81932</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"dueByUtc"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"2024-02-25T13:00:00Z"</span>
+    <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span>
+</code><!----><a class="btn border-0 code-action" href="#" title="Copy"></a></pre>
+
+    </main>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Hurtigruten Partner APIs</p>
+    </footer>
+
+    <script src="../../../../assets/spa-sidebar.js"></script>
+    </body>
+</html>

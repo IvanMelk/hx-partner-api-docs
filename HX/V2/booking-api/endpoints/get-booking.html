@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Booking</title>
+
+    <link rel="stylesheet" href="../../../../assets/sidebar.css">
+    <link rel="stylesheet" href="../../../../assets/page-styles.css">
+    </head>
+<body>
+
+    <div class="main-content">
+        <div class="content-wrapper">
+            <div id="content">
+                <main class="content">
+        
+<h1 id="get-booking">Get Booking</h1>
+
+<p><strong>METHOD</strong>: GET</p>
+<p><strong>Endpoint</strong>: <code>/bookings/{:bookingId}</code></p>
+<h2 id="example">Example</h2>
+<h3 id="request">Request</h3>
+<pre><code class="lang-bash hljs language-bash" data-highlighted="yes">curl --location --globoff <span class="hljs-string">'{:apiBase}/bookings/1234567'</span>
+</code><!----><a class="btn border-0 code-action" href="#" title="Copy"></a></pre>
+<h3 id="response">Response</h3>
+<p><strong>Type</strong>: <a href="../../_generated/Partner.Public.BookingApi.Bookings.Booking.html">Booking</a></p>
+<pre><code class="lang-JSON hljs language-JSON" data-highlighted="yes"><span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1234567</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"status"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Unconfirmed"</span>
+<span class="hljs-punctuation">}</span>
+</code><!----><a class="btn border-0 code-action" href="#" title="Copy"></a></pre>
+
+    </main>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Hurtigruten Partner APIs</p>
+    </footer>
+
+    <script src="../../../../assets/spa-sidebar.js"></script>
+    </body>
+</html>

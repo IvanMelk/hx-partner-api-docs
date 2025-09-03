@@ -1,0 +1,214 @@
+/* Shared page styles for all HTML files - Dark theme matching Navigation sidebar */
+
+/* Main content area styles - Dark theme */
+#content, .content {
+    margin-left: 320px;
+    padding: 20px;
+    min-height: 100vh;
+    transition: margin-left 0.3s ease;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+/* Force dark background for body and html */
+body, html {
+    background-color: #1a1a1a !important;
+    color: #e0e0e0 !important;
+    margin: 0;
+    padding: 0;
+}
+
+/* Headings - High contrast white */
+#content h1, .content h1, h1 {
+    color: #ffffff !important;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #007bff;
+    font-weight: 600;
+    background-color: transparent !important;
+}
+
+#content h2, .content h2, h2 {
+    color: #ffffff !important;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    background-color: transparent !important;
+}
+
+#content h3, .content h3, h3 {
+    color: #e0e0e0 !important;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+    background-color: transparent !important;
+}
+
+#content h4, .content h4, h4,
+#content h5, .content h5, h5,
+#content h6, .content h6, h6 {
+    color: #e0e0e0 !important;
+    background-color: transparent !important;
+}
+
+/* Paragraphs and text - Light gray for readability */
+#content p, .content p, p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #e0e0e0 !important;
+    background-color: transparent !important;
+}
+
+/* Strong and emphasis - White for importance */
+#content strong, .content strong, strong,
+#content b, .content b, b {
+    color: #ffffff !important;
+    font-weight: 600;
+    background-color: transparent !important;
+}
+
+#content em, .content em, em,
+#content i, .content i, i {
+    color: #cccccc !important;
+    background-color: transparent !important;
+}
+
+/* Lists */
+#content ul, .content ul, ul,
+#content ol, .content ol, ol {
+    color: #e0e0e0 !important;
+    background-color: transparent !important;
+}
+
+#content li, .content li, li {
+    color: #e0e0e0 !important;
+    margin-bottom: 0.5rem;
+    background-color: transparent !important;
+}
+
+/* Links - Blue for visibility */
+#content a, .content a, a {
+    color: #007bff !important;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    background-color: transparent !important;
+}
+
+#content a:hover, .content a:hover, a:hover {
+    color: #0056b3 !important;
+    text-decoration: underline;
+}
+
+#content a:visited, .content a:visited, a:visited {
+    color: #6f42c1 !important;
+}
+
+/* Tables */
+#content table, .content table, table {
+    margin: 1.5rem 0;
+    color: #e0e0e0 !important;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: transparent !important;
+}
+
+#content table th, .content table th, table th {
+    background-color: #333 !important;
+    color: #ffffff !important;
+    padding: 0.75rem;
+    text-align: left;
+    border: 1px solid #444;
+    font-weight: 600;
+}
+
+#content table td, .content table td, table td {
+    padding: 0.75rem;
+    border: 1px solid #444;
+    background-color: #2a2a2a !important;
+    color: #e0e0e0 !important;
+}
+
+#content table tr:hover td, .content table tr:hover td, table tr:hover td {
+    background-color: #333 !important;
+}
+
+/* Code blocks and inline code */
+#content pre, .content pre, pre {
+    background-color: #0f0f0f !important;
+    border: 1px solid #333 !important;
+    border-radius: 4px;
+    padding: 1rem;
+    overflow-x: auto;
+    color: #e0e0e0 !important;
+}
+
+#content code, .content code, code {
+    background-color: #0f0f0f !important;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    color: #e0e0e0 !important;
+    border: 1px solid #333;
+}
+
+/* Divs and other containers */
+#content div, .content div, div {
+    color: #e0e0e0 !important;
+    background-color: transparent !important;
+}
+
+#content span, .content span, span {
+    color: #e0e0e0 !important;
+    background-color: transparent !important;
+}
+
+/* Loading and error states */
+.loading, .error {
+    background-color: transparent !important;
+    color: #e0e0e0 !important;
+    text-align: center;
+    padding: 40px;
+}
+
+.loading h1, .error h1 {
+    color: #ffffff !important;
+    background-color: transparent !important;
+}
+
+.error {
+    color: #ff6b6b !important;
+    padding: 20px;
+    border: 1px solid #ff6b6b;
+    border-radius: 4px;
+    background-color: #2a2a2a !important;
+}
+
+.error h2 {
+    color: #ff6b6b !important;
+    background-color: transparent !important;
+}
+
+.error button {
+    background-color: #007bff !important;
+    color: #ffffff !important;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.error button:hover {
+    background-color: #0056b3 !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #content, .content {
+        margin-left: 0;
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+}

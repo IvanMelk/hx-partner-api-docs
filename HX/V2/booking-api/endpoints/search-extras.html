@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Extras</title>
+
+    <link rel="stylesheet" href="../../../../assets/sidebar.css">
+    <link rel="stylesheet" href="../../../../assets/page-styles.css">
+    </head>
+<body>
+
+    <div class="main-content">
+        <div class="content-wrapper">
+            <div id="content">
+                <main class="content">
+        
+<h1 id="search-extras">Search Extras</h1>
+
+<p><strong>METHOD</strong>: GET</p>
+<p><strong>Endpoint</strong>: <code>/quote/{:quoteId}/{:voyageId}/extras</code></p>
+<p><strong>Query parameters</strong>:</p>
+<div class="table-responsive"><table class="table table-bordered table-condensed">
+<thead>
+<tr>
+<th>Name</th>
+<th>Required</th>
+<th>JSON Type</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Addons</td>
+<td>No</td>
+<td>Boolean</td>
+<td>At least one parameter must be true</td>
+</tr>
+<tr>
+<td>Excursions</td>
+<td>No</td>
+<td>Boolean</td>
+<td>At least one parameter must be true</td>
+</tr>
+<tr>
+<td>Meals</td>
+<td>No</td>
+<td>Boolean</td>
+<td>At least one parameter must be true</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="example">Example</h2>
+<h3 id="request">Request</h3>
+<pre><code class="lang-bash hljs language-bash" data-highlighted="yes">curl --location <span class="hljs-string">'{:apiBase}/quote/4539fc0e-ee2c-4468-b493-70052a7e9e8d/9c5d0236-fabc-4053-a565-b59e983936c1/extras?addons=true&amp;excursions=true&amp;meals=true'</span>
+</code><!----><a class="btn border-0 code-action" href="#" title="Copy"></a></pre>
+<h3 id="response">Response</h3>
+<p><strong>Type</strong>: <a href="../../_generated/Partner.Public.BookingApi.Search.ExtraSearchResult.html">ExtraSearchResult</a></p>
+<pre><code class="lang-JSON hljs language-JSON" data-highlighted="yes"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"addons"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"46cf0e8e-b189-456f-b387-cfd688b68bb6"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"code"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"HIPA"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"passengerPrices"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+        <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"9f8ebd05-69da-4369-a8fe-9c12a8a813ff"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">97.0</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"20981ae9-6fb8-426a-920e-a224e8fb0fd7"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">97.0</span>
+        <span class="hljs-punctuation">}</span>
+      <span class="hljs-punctuation">]</span>
+    <span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"excursions"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"ad748fb9-a000-4c7d-86e9-bde2591ba514"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"code"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"HR-KSU11E"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"description"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Bergtatt- Magnificent marble mine (Kristiansund-Molde)"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"startDateTime"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"2024-04-13T16:45:00"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"endDateTime"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"2024-04-13T21:15:00"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"startPort"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"KSU"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"endPort"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"MOL"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"passengerPrices"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+        <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"9f8ebd05-69da-4369-a8fe-9c12a8a813ff"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">199.0</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"20981ae9-6fb8-426a-920e-a224e8fb0fd7"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">199.0</span>
+        <span class="hljs-punctuation">}</span>
+      <span class="hljs-punctuation">]</span>
+    <span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"meals"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"2ff77489-4019-406a-a958-ea4fdd102efc"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"code"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"VIPPACK"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"passengerPrices"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+        <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"9f8ebd05-69da-4369-a8fe-9c12a8a813ff"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">210.0</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"passengerId"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"20981ae9-6fb8-426a-920e-a224e8fb0fd7"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"price"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">210.0</span>
+        <span class="hljs-punctuation">}</span>
+      <span class="hljs-punctuation">]</span>
+    <span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">]</span>
+<span class="hljs-punctuation">}</span>
+</code><!----><a class="btn border-0 code-action" href="#" title="Copy"></a></pre>
+
+    </main>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Hurtigruten Partner APIs</p>
+    </footer>
+
+    <script src="../../../../assets/spa-sidebar.js"></script>
+    </body>
+</html>

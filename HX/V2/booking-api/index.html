@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking API Overview</title>
+
+    <link rel="stylesheet" href="../../../assets/sidebar.css">
+    <link rel="stylesheet" href="../../../assets/page-styles.css">
+    </head>
+<body>
+
+    <div class="main-content">
+        <div class="content-wrapper">
+            <div id="content">
+                <main class="content">
+        
+<h1 id="booking-api-overview">Booking API Overview</h1>
+
+<p>The booking API currently supports fetching basic information about existing bookings and creating new ones through a quote-based system.
+When you search for a package, you will receive a unique quote id (through a <code>quoteId</code> property) for your search that is valid for a set amount of time.
+While the quote is valid, you can modify its contents and then commit it to convert it into a new booking.</p>
+<!-- TODO - Should actually specify how long a quote is valid -->
+<div class="IMPORTANT alert alert-danger">
+<h5>Important</h5>
+<p>If the server encounters an error while processing a quote modification, then the quote will be invalidated and you need to restart the booking flow.</p>
+</div>
+<p>To get started, check out <a href="minimal-flow.html">the minimal booking flow</a>. For optional offerings, check out <a href="supplementals.html">arrival &amp; departure packages</a> and <a href="extras.html">extras</a>.</p>
+
+    </main>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Hurtigruten Partner APIs</p>
+    </footer>
+
+    <script src="../../../assets/spa-sidebar.js"></script>
+    </body>
+</html>

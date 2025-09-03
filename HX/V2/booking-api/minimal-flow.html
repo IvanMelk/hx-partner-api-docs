@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+
+    <link rel="stylesheet" href="../../../assets/sidebar.css">
+    <link rel="stylesheet" href="../../../assets/page-styles.css">
+    </head>
+<body>
+
+    <div class="main-content">
+        <div class="content-wrapper">
+            <div id="content">
+                <main class="content">
+
+<h2 id="minimal-booking-flow">Minimal booking flow</h2>
+<p>For a minimal, working booking flow, you need to:</p>
+<ol>
+<li>Search for a package to get an initial quote id</li>
+<li>Supply the required details to create the quote <!-- TODO - Feels weird to call this "creating" a quote --></li>
+<li>Commit the quote to convert it into a new booking</li>
+</ol>
+<p>If an uncommitted quote is no longer of interest, then it can be manually deleted.</p>
+<h3 id="searching-for-a-package">Searching for a package</h3>
+<p>To start the booking flow, you need to perform a search for the desired package through <a href="endpoints/search-package.html">the Search Package endpoint</a> using a package code obtained from the flat files.</p>
+<h3 id="creating-a-quote">Creating a quote</h3>
+<p>To create a quote based on the package search results, you need to supply the departure and cabin selection along with passengers details through <a href="endpoints/create-quote.html">the Create Quote endpoint</a>.</p>
+<h3 id="fetching-a-valid-quote">Fetching a valid quote</h3>
+<p>You can fetch currently valid quotes through <a href="endpoints/get-quote.html">the Get Quote endpoint</a> to check their contents.</p>
+<h3 id="deleting-a-quote">Deleting a quote</h3>
+<p>You can delete valid, uncommitted quotes through <a href="endpoints/delete-quote.html">the Delete Quote endpoint</a>.</p>
+<h3 id="commiting-a-quote">Commiting a quote</h3>
+<p>To convert a quote into a new booking, you need to commit the quote by supplying the payment type for the booking through <a href="endpoints/commit-quote.html">the Commit Quote endpoint</a>.</p>
+<h3 id="fetching-a-booking">Fetching a booking</h3>
+<p>You can fetch bookings through <a href="endpoints/get-booking.html">the Get Booking endpoint</a>. At the moment, there is a limited amount of booking info that is available through the API.</p>
+
+    </main>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Hurtigruten Partner APIs</p>
+    </footer>
+
+    <script src="../../../assets/spa-sidebar.js"></script>
+    </body>
+</html>

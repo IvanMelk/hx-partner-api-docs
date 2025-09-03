@@ -3,56 +3,33 @@
 <head>
   <meta charset="utf-8">
   <title>HX Partner API Documentation</title>
-  <link rel="icon" href="assets/logo.svg">
+
+  <link rel="stylesheet" href="assets/sidebar.css">
+  <link rel="stylesheet" href="assets/page-styles.css">
+  <style>
+    .loading {
+      text-align: center;
+      padding: 40px;
+      color: #cccccc;
+    }
+    
+    .error {
+      color: #ff6b6b;
+      padding: 20px;
+      border: 1px solid #ff6b6b;
+      border-radius: 4px;
+      background-color: #2a2a2a;
+    }
+  </style>
 </head>
 <body>
-  <main>
-    <article>
-      <h1>HX API Documentation</h1>
-    
-      <p>Welcome to the Hurtigruten Expeditions Partner API documentation. This site provides comprehensive information on how to integrate with Hurtigruten Expeditions' expedition services.</p>
-    
-      <h2>Overview</h2>
-      <p>Hurtigruten Expeditions offers the Expeditions API to provide access to expedition cruises:</p>
-      <ul>
-        <li><strong>Hurtigruten Expeditions (HX) API</strong>: Access to expedition cruises, including booking, availability, pricing, and detailed content about ships, cabins, excursions, and ports.</li>
-      </ul>
-    
-      <h2>Getting Started</h2>
-      <p>To start using the Hurtigruten Expeditions APIs, follow these steps:</p>
-      <ol>
-        <li><strong>Contact us for credentials</strong>: Reach out to our support team via the <a href="https://hurtigruten.atlassian.net/servicedesk/customer/portal/13/group/159">support portal</a> to get your API credentials.</li>
-        <li><strong>Authenticate with Auth0</strong>: Use your credentials to obtain a bearer token from Auth0.</li>
-        <li><strong>Make API Requests</strong>: Use the bearer token to authenticate your requests to the Hurtigruten Expeditions APIs.</li>
-      </ol>
-    
-      <div>
-        <h5>Note</h5>
-        <p>Agencies integrating through a tech partner should contact their tech partner to initiate the signup process on their behalf.</p>
-      </div>
-    
-      <h2>API Sections</h2>
-    
-      <div>
-        <h3>Hurtigruten Expeditions (HX) API</h3>
-        <p>The HX API provides access to Hurtigruten Expeditions' expedition services. You can use this API to check availability, book cruises, and retrieve detailed information about expedition ships, cabins, excursions, and ports.</p>
-        <ul>
-          <li><a href="HX/index.html">HX API Documentation</a></li>
-        </ul>
-      </div>
-    
-      <h2>Authentication</h2>
-      <p>Authentication may work differently depending on which API you're using. Please refer to the Getting Started page for each specific API for detailed instructions on how to authenticate.</p>
-      <p>All API requests require authentication via a bearer token from Auth0.</p>
-    
-      <div>
-        <h5>Note</h5>
-        <p>API credentials are specific to the HX API. Please ensure you have the correct credentials for accessing the expedition services.</p>
-      </div>
-    
-      <h2>Support</h2>
-      <p>If you have any questions or need assistance, please contact our support team via the <a href="https://hurtigruten.atlassian.net/servicedesk/customer/portal/13/group/159">support portal</a>.</p>
-    </article>
-  </main>
+  <!-- Sidebar will be injected here -->
+  
+  <div id="content">
+    <div class="loading">
+    </div>
+  </div>
+
+  <script src="assets/spa-sidebar.js"></script>
 </body>
 </html>

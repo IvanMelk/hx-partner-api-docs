@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Package Files</title>
+    
+    <link rel="stylesheet" href="../../../../assets/page-styles.css">
+
+    <link rel="stylesheet" href="../../../../assets/sidebar.css">
+    <link rel="stylesheet" href="../../../../assets/page-styles.css">
+    </head>
+<body>
+
+    <div class="main-content">
+        <div class="content-wrapper">
+            <div id="content">
+                
+    <div class="main-content">
+        <div class="content-wrapper">
+            <div id="content">
+                <main class="content">
+                    
+<h1 id="get-package-files">Get Package Files</h1>
+
+<p><strong>METHOD</strong>: GET</p>
+<p><strong>Endpoint</strong>: <code>/packages</code></p>
+<p><strong>Query Parameters</strong></p>
+<div class="table-responsive"><table class="table table-bordered table-condensed">
+<thead>
+<tr>
+<th>Name</th>
+<th>Required</th>
+<th>JSON Type</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Market</td>
+<td>No</td>
+<td>String</td>
+<td>The market within which to search.</td>
+</tr>
+<tr>
+<td>Currency</td>
+<td>No</td>
+<td>String</td>
+<td>The <a target="_blank" rel="noopener noreferrer nofollow" class="external external-link-disabled">ISO 4217</a> conformant currency code the packages are to be sold in.</td>
+</tr>
+<tr>
+<td>Method</td>
+<td>No</td>
+<td>String</td>
+<td>Return either a ZIP archive download or as JSON in the response body. Possible options: archive, json. Defaults to json.</td>
+</tr>
+<tr>
+<td>Skip</td>
+<td>No</td>
+<td>Number</td>
+<td>The amount of items to offset the search results by. Only used in JSON results.</td>
+</tr>
+<tr>
+<td>Take</td>
+<td>No</td>
+<td>Number</td>
+<td>The amount of items to include in the returned results. Only used in JSON results.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="example">Example</h2>
+<h3 id="request">Request</h3>
+<pre><code class="lang-bash hljs language-bash" data-highlighted="yes">curl --location <span class="hljs-string">'{:apiBase}/packages?market=no&amp;currency=sek'</span>
+</code><!----><a class="btn border-0 code-action" href="#" title="Copy"></a></pre>
+<h3 id="response">Response</h3>
+<pre><code class="lang-json hljs language-json" data-highlighted="yes"><span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"total"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1234</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"returned"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">20</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"data"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+        <span class="hljs-comment">// ommitted, see note</span>
+    <span class="hljs-punctuation">]</span>
+<span class="hljs-punctuation">}</span>
+</code><!----><a class="btn border-0 code-action" href="#" title="Copy"></a></pre>
+<p><em>note: For details about the package payload, see <a href="../../_generated/Partner.Public.Package.Package.html">Package</a>.</em></p>
+<h3 id="request-1">Request</h3>
+<pre><code class="lang-bash hljs language-bash" data-highlighted="yes">curl --location <span class="hljs-string">'{:apiBase}/packages?market=no&amp;currency=sek&amp;method=archive'</span>
+</code><!----><a class="btn border-0 code-action" href="#" title="Copy"></a></pre>
+<h3 id="response-1">Response</h3>
+<p><strong>Type</strong>: File Download</p>
+<p>Contents:</p>
+<ul>
+<li>{market}_{currency}_packages.json</li>
+</ul>
+
+                </main>
+            </div>
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Hurtigruten Partner APIs</p>
+    </footer>
+
+    <script src="../../../../assets/spa-sidebar.js"></script>
+    </body>
+</html>

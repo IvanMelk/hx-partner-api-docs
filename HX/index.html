@@ -16,20 +16,16 @@
       document.documentElement.setAttribute('data-bs-theme', 'dark')
     </script>
 
-  </head>
+    <link rel="stylesheet" href="../assets/sidebar.css">
+    <link rel="stylesheet" href="../assets/page-styles.css">
+    </head>
 
     <body>
-    <!-- Header will be injected by header.js component -->
 
-    <main>
-      <div>
-          <nav id="breadcrumb">
-            <ol>
-                                            <li><a href="../index.html">Home</a></li>
-              <li   aria-current="page">HX API</li>
-            </ol>
-          </nav>
-        </div>
+    <div class="main-content">
+        <div class="content-wrapper">
+            <div id="content">
+                <main>
 
         <article>
           <h1 id="hx-api-documentation">HX API Documentation</h1>
@@ -54,8 +50,6 @@
             </ul>
           </div>
 
-       
-
           <h2 id="getting-started">Getting Started</h2>
           <p>To start using the HX APIs, follow these steps:</p>
           <ol>
@@ -74,6 +68,10 @@
 
         </article>
     </main>
+            </div>
+        </div>
+    </div>
 
-  </body>
+    <script src="../assets/spa-sidebar.js"></script>
+    </body>
 </html>
