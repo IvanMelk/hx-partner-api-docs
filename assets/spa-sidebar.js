@@ -365,6 +365,14 @@ function setupNavigation() {
       console.log('Event target:', e.target);
       console.log('Event currentTarget:', e.currentTarget);
       
+      // Special debugging for V1 API
+      if (link.getAttribute('data-page') === '/HX/V1/index.html') {
+        console.log('=== V1 API CLICK HANDLER DEBUG ===');
+        console.log('V1 API link clicked successfully');
+        console.log('Link element:', link);
+        console.log('Event object:', e);
+      }
+      
       // Prevent default behavior and stop propagation
       e.preventDefault();
       e.stopPropagation();
@@ -382,6 +390,13 @@ function setupNavigation() {
         loadHomeContent();
       } else {
         console.log('Loading page content:', page);
+        
+        // Special debugging for V1 API
+        if (page === '/HX/V1/index.html') {
+          console.log('=== V1 API LOAD CONTENT CALL DEBUG ===');
+          console.log('About to call loadContent with page:', page);
+        }
+        
         loadContent(page);
       }
       
@@ -418,11 +433,27 @@ async function loadContent(pagePath) {
     // Fix path based on environment
     let fetchPath = pagePath;
     if (isGitHubPages && pagePath.startsWith('/')) {
-      // On GitHub Pages, convert absolute paths to relative paths
+      // On GitHub Pages, try multiple path formats
+      const currentPath = window.location.pathname;
+      
+      // First try: relative path (remove leading slash)
       fetchPath = pagePath.substring(1);
+      
+      // If we're in a repository context, we might need to adjust
+      if (currentPath.includes('/hx-partner-api-docs/')) {
+        // We're already in the repository context, relative path should work
+        fetchPath = pagePath.substring(1);
+      }
     }
     
     console.log(`Loading content: original=${pagePath}, fetch=${fetchPath}, isGitHubPages=${isGitHubPages}, hostname=${window.location.hostname}, pathname=${window.location.pathname}`);
+    
+    // Special debugging for V1 API
+    if (pagePath === '/HX/V1/index.html') {
+      console.log('=== V1 API DEBUG ===');
+      console.log('Attempting to load V1 API content');
+      console.log('Fetch path:', fetchPath);
+    }
     
     // Fetch the content
     const response = await fetch(fetchPath);
@@ -436,6 +467,14 @@ async function loadContent(pagePath) {
         // Try with repository name prefix
         const altPath = `hx-partner-api-docs${pagePath}`;
         console.log(`Trying alternative path: ${altPath}`);
+        
+        // Special handling for V1 API
+        if (pagePath === '/HX/V1/index.html') {
+          console.log('=== V1 API FALLBACK DEBUG ===');
+          console.log('Original path:', pagePath);
+          console.log('First attempt path:', fetchPath);
+          console.log('Alternative path:', altPath);
+        }
         
         try {
           const altResponse = await fetch(altPath);
@@ -453,6 +492,16 @@ async function loadContent(pagePath) {
                           doc.querySelector('.content') ||
                           doc.querySelector('#content') ||
                           doc.body;
+            
+            // Special debugging for V1 API content extraction
+            if (pagePath === '/HX/V1/index.html') {
+              console.log('=== V1 API CONTENT EXTRACTION DEBUG ===');
+              console.log('Found main element:', doc.querySelector('main'));
+              console.log('Found article element:', doc.querySelector('article'));
+              console.log('Found #content element:', doc.querySelector('#content'));
+              console.log('Selected content element:', content);
+              console.log('Content element tag name:', content ? content.tagName : 'null');
+            }
             
             if (content) {
               if (content.id === 'content') {
@@ -586,6 +635,16 @@ async function loadContent(pagePath) {
                   doc.querySelector('.content') ||
                   doc.querySelector('#content') ||
                   doc.body;
+    
+    // Special debugging for V1 API content extraction
+    if (pagePath === '/HX/V1/index.html') {
+      console.log('=== V1 API MAIN CONTENT EXTRACTION DEBUG ===');
+      console.log('Found main element:', doc.querySelector('main'));
+      console.log('Found article element:', doc.querySelector('article'));
+      console.log('Found #content element:', doc.querySelector('#content'));
+      console.log('Selected content element:', content);
+      console.log('Content element tag name:', content ? content.tagName : 'null');
+    }
     
     if (content) {
       // If the content is already in #content, don't double-wrap it
@@ -734,18 +793,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Function to prevent any unwanted navigation in the SPA
 function setupGlobalNavigationPrevention() {
-  // Prevent any clicks on links with data-page from navigating
-  document.addEventListener('click', function(e) {
-    const target = e.target.closest('.nav-link[data-page]');
-    if (target) {
-      console.log('Global click prevention caught:', target.getAttribute('data-page'));
-      e.preventDefault();
-      e.stopPropagation();
-      e.stopImmediatePropagation();
-      e.returnValue = false;
-      return false;
-    }
-  }, { passive: false, capture: true });
+  // The main navigation handler already prevents default behavior for nav links
+  // No need for additional global prevention that interferes with the main handler
   
   // Prevent any form submissions or other navigation
   document.addEventListener('submit', function(e) {
